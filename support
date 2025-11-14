@@ -1,173 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- EDIT HERE: Change the title to your app's name -->
-    <title>MyApp Support</title>
-
-    <style>
-        /* --- General Styles --- */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f8f9fa;
-            color: #343a40;
-            margin: 0;
-            padding: 20px;
-        }
-
-        /* --- Main Content Container --- */
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 30px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        /* --- Header --- */
-        header {
-            text-align: center;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            color: #212529;
-            margin-bottom: 0.25em;
-        }
-
-        header p {
-            font-size: 1.1em;
-            color: #6c757d;
-        }
-
-        /* --- Sections --- */
-        section {
-            margin-top: 30px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            color: #007bff;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #007bff;
-            margin-bottom: 20px;
-        }
-
-        /* --- Contact Section --- */
-        #contact p {
-            font-size: 1.1em;
-        }
-
-        .email-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .email-link:hover {
-            background-color: #0056b3;
-        }
-
-        /* --- FAQ Section --- */
-        .faq-item {
-            margin-bottom: 25px;
-        }
-
-        .faq-item h3 {
-            font-size: 1.2em;
-            color: #343a40;
-            margin-bottom: 8px;
-        }
-
-        .faq-item p {
-            color: #6c757d;
-            margin: 0;
-        }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e9ecef;
-            font-size: 0.9em;
-            color: #6c757d;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIVREST – Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --primary: #0055ff;
+      --background: #f7f8fc;
+      --card-bg: #fff;
+      --text: #1f2330;
+      --muted: #6c738c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #0f1116;
+        --card-bg: #1b1f2b;
+        --text: #f2f4ff;
+        --muted: #9ba2c3;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, rgba(0,85,255,0.08), rgba(255,255,255,0));
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card p {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+    .card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0,85,255,0.08);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-top: 6px;
+    }
+    .faq-item + .faq-item {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    @media (max-width: 600px) {
+      header {
+        padding: 50px 16px 30px;
+      }
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Support AIVREST</h1>
+    <p>Besoin d’aide ? L’équipe AIVREST est là pour vous répondre rapidement.</p>
+  </header>
 
-    <div class="container">
-        <header>
-            <!-- EDIT HERE: Change "MyApp" to your app's name -->
-            <h1>MyApp Support</h1>
-            <p>We're here to help you get the most out of our app.</p>
-        </header>
+  <main>
+    <div class="grid">
+      <section class="card">
+        <h2>📨 Assistance générale</h2>
+        <p>Questions sur le chat IA, la communauté ou les fonctionnalités.</p>
+        <a href="mailto:support@aivrest.com">support@aivrest.com</a>
+        <div class="contact-chip">Temps de réponse moyen : 24h</div>
+      </section>
 
-        <main>
-            <!-- Contact Information Section -->
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>
-                    The best way to get help is to send us an email. We review every message and will do our best to get back to you within 24-48 hours.
-                </p>
-                <!-- EDIT HERE: Change the email address to your support email -->
-                <a href="mailto:support@myapp.com" class="email-link">Email Support</a>
-            </section>
+      <section class="card">
+        <h2>🔐 Vie privée & RGPD</h2>
+        <p>Demande d’accès/suppression de données, signalement d’un abus.</p>
+        <a href="mailto:privacy@aivrest.com">privacy@aivrest.com</a>
+        <div class="contact-chip">DPO AIVREST</div>
+      </section>
 
-            <!-- Frequently Asked Questions Section -->
-            <section id="faq">
-                <h2>Frequently Asked Questions (FAQ)</h2>
-
-                <!-- EDIT HERE: Add, remove, or change these FAQ items to match your app -->
-                <div class="faq-item">
-                    <h3>Is this app free to use?</h3>
-                    <p>
-                        Yes, our app is completely free to download and use. There are no hidden fees or in-app purchases.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>How do I report a bug or suggest a feature?</h3>
-                    <p>
-                        Please send us an email with a detailed description of the bug or your feature idea. Screenshots are very helpful! We appreciate all user feedback.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Do you collect my personal data?</h3>
-                    <p>
-                        We take your privacy seriously. Our app does not collect any personally identifiable information. For more details, please refer to our Privacy Policy.
-                    </p>
-                </div>
-
-                 <div class="faq-item">
-                    <h3>What devices does the app support?</h3>
-                    <p>
-                        The app is designed for iOS and is compatible with iPhone and iPad models running iOS 15.0 or later.
-                    </p>
-                </div>
-
-            </section>
-        </main>
-
-        <footer>
-            <!-- EDIT HERE: Change "MyApp" and the year -->
-            <p>&copy; 2025 MyApp. All rights reserved.</p>
-        </footer>
+      <section class="card">
+        <h2>🚨 Signaler un contenu</h2>
+        <p>Pour tout contenu ou comportement contraire aux règles :</p>
+        <ul>
+          <li>Utilisez le bouton « Signaler » dans l’app</li>
+          <li>Ou écrivez à <a href="mailto:support@aivrest.com?subject=Signalement">support@aivrest.com</a></li>
+        </ul>
+      </section>
     </div>
 
+    <section class="card" style="margin-top: 32px;">
+      <h2>❓ FAQ rapide</h2>
+      <div class="faq-item">
+        <strong>Comment supprimer mon compte ?</strong>
+        <p>Ouvrez l’app → Profil → Paramètres → « Supprimer mon compte ». Votre profil et vos messages seront effacés définitivement.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Je veux bloquer un utilisateur</strong>
+        <p>Depuis une conversation ou un post, ouvrez le menu « … » puis choisissez « Bloquer ».</p>
+      </div>
+      <div class="faq-item">
+        <strong>Comment contacter le support depuis l’app ?</strong>
+        <p>Ouvrez Profil → Paramètres → « Aide & Support ». Vous pouvez envoyer un email ou consulter cette page.</p>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: 32px;">
+      <h2>📍 Adresse & mention légale</h2>
+      <p>AIVREST – [Ajoute ton adresse légale complète]</p>
+      <p>SIREN / TVA : [Optionnel]</p>
+    </section>
+  </main>
 </body>
 </html>
